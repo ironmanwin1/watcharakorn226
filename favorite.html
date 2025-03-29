@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .car-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .car-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #f3d3dc;
+      text-align: center;
+    }
+
+    .car-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .car-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 1rem 0;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background-color: #f5f5f5;
+    }
+
+    .car-card h3 {
+      color: #8b1d3b;
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .car-card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .car-card a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.5rem 1.25rem;
+      background-color: #ffccd5;
+      color: #5a2a37;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .car-card a:hover {
+      background-color: #ffb3c1;
+    }
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo"> Watcharakorn</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="garage.html">Profile</a>
+    <a href="clock.html">Clock_JS</a>
+    <a href="favorite.html">Favorites</a>
+  </div>
+</nav>
+
+  <header class="apple-header">
+    <h1>🚗 Favorite Cars</h1>
+  </header>
+
+  <main class="car-list">
+    <div class="car-card">
+      <h3>Toyota GR Supra</h3>
+      <img src="images/ID5.jpeg" alt="Toyota GR Supra">
+      <p>High-performance sports coupe from Toyota</p>
+      <a href="https://www.toyota.com/grsupra/" target="_blank">Learn more</a>
+    </div>
+
+    <div class="car-card">
+      <h3>Ford Mustang GT</h3>
+      <img src="images/ID6.jpeg" alt="Ford Mustang GT">
+      <p>Iconic American Muscle Sports Car</p>
+      <a href="https://www.ford.com/cars/mustang/" target="_blank">Learn more</a>
+    </div>
+
+    <div class="car-card">
+      <h3>Nissan GT-R R35</h3>
+      <img src="images/ID7.jpeg" alt="Nissan GT-R R35">
+      <p>Japanese sports car legend known as Godzilla</p>
+      <a href="https://www.nissanusa.com/vehicles/sports-cars/gt-r.html" target="_blank">Learn more</a>
+    </div>
+  </main>
+
+  <footer class="apple-footer"><p>&copy; 2025 Watcharakorn Noipandee</p>
+  </footer>
+</body>
+</html>

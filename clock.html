@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo"> Watcharakorn</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="garage.html">Profile</a>
+    <a href="clock.html">Clock_JS</a>
+    <a href="favorite.html">Favorites</a>
+  </div>
+</nav>
+
+  <header class="apple-header">
+    <h1 style="font-size: 1.8rem; color: #1d1d1f; margin-bottom: 1.5rem;">🌍 Hello World Clock</h1>
+  </header>
+
+  <section style="margin-top: 3rem; padding: 2rem; text-align: center;">
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+      <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="margin: 0 0 0.5rem;">🇹🇭 Thailand</h3>
+        <div id="clock-th" style="font-size: 1.5rem; font-weight: bold;"></div>
+      </div>
+      <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="margin: 0 0 0.5rem;">🇺🇸 New York</h3>
+        <div id="clock-ny" style="font-size: 1.5rem; font-weight: bold;"></div>
+      </div>
+      <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="margin: 0 0 0.5rem;">🇯🇵 Japan</h3>
+        <div id="clock-jp" style="font-size: 1.5rem; font-weight: bold;"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function updateWorldClocks() {
+      const opts = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      document.getElementById('clock-th').textContent = new Date().toLocaleTimeString('th-TH', { timeZone: 'Asia/Bangkok', ...opts });
+      document.getElementById('clock-ny').textContent = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York', ...opts });
+      document.getElementById('clock-jp').textContent = new Date().toLocaleTimeString('ja-JP', { timeZone: 'Asia/Tokyo', ...opts });
+    }
+    setInterval(updateWorldClocks, 1000);
+    updateWorldClocks();
+  </script>
+
+
+  <footer class="apple-footer"><p>&copy; 2025 Watcharakorn Noipandee</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
